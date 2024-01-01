@@ -42,4 +42,4 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
 + 🚶‍♂️🤝 Single Player vs Multiplayer:
   + Change the `current_player` variable to determine whether it's a two-player game ('X' vs 'O') or a single-player game against the computer.
 
-If you have any suggestions, improvements, or feature ideas for this Tic-Tac-Toe game, feel free to contribute, Thank you!🙏
+If you have any suggestions, improvements, or feature ideas for this Tic-Tac-Toe game, feel free to contribute, Thank you!🙏🙏
