@@ -21,20 +21,42 @@ def get_player_input(board):
         print("Oh noo, that spot is already taking(*_*)")
 
 # Check for win or tie
+winner = None
 def row(board):
+    global winner
     if board[0] == board[1] == board[2] and board[0] != "-":
-        pass
-    if board[3] == board[4] == board[5] and board[3] != "-":
-        pass
-    if board[6] == board[7] == board[8] and board[6] != "-":
-        pass
+        winner = board[0]
+        return True
+    
+    elif board[3] == board[4] == board[5] and board[3] != "-":
+        winner = board[3]
+        return True
+    
+    elif board[6] == board[7] == board[8] and board[6] != "-":
+        winner = board[6]
+        return True
+    
+def column(board):
+    global winner
+    if board[0] == board[3] == board[6] and board[0] != "-":
+        winner = board[0]
+        return True
+    
+    elif board[1] == board[4] == board[7] and board[1] != "-":
+        winner = board[1]
+        return True
+    
+    elif board[2] == board[5] == board[8] and board[2] != "-":
+        winner = board[2]
+        return True
+
+
 
 # A loop to make the game run continously
 while True:
     display_board(board)
     get_player_input(board)
-    if win_tie(board):
-        break
+
     
 
 
