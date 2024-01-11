@@ -20,13 +20,20 @@ def get_player_input(board):
     else:
         print("Oh noo, that spot is already taking(*_*)")
 
+# Check for win or tie
+def win_tie(board):
+    if board[0] == board[1] == board[2] and board[0] != "-":
+        print("the winner is f{board[0]}")
+
+
+# A loop to make the game run continously
 while True:
     display_board(board)
     get_player_input(board)
+    win_tie(board)
+    break
 
-# take player input
 
-# check for win or tie
 
 # switch the player
 
