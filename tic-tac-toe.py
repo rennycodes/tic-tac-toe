@@ -28,6 +28,7 @@ def get_player_input(board):
 # Check for win or tie
 def row(board):
     global winner
+    
     if board[0] == board[1] == board[2] and board[0] != "-":
         winner = board[0]
         return True
@@ -42,6 +43,7 @@ def row(board):
     
 def column(board):
     global winner
+
     if board[0] == board[3] == board[6] and board[0] != "-":
         winner = board[0]
         return True
@@ -56,6 +58,7 @@ def column(board):
 
 def diagonal(board):
     global winner
+
     if board[0] == board[5] == board[8] and board[0] != "-":
         winner = board[1]
         return True
@@ -66,10 +69,22 @@ def diagonal(board):
     
 def tie(board):
     global game_running
+
     if "-" not in board:
         display_board(board)
         print("It's a tie")
         game_running = False
+
+# Switch player
+def switch_player():
+    global current_player
+
+    if current_player == "X":
+        current_player = "O"
+
+    else:
+        current_player = "X"
+
 
 
 # A loop to make the game run continously
@@ -81,6 +96,5 @@ while True:
 
 
 
-# switch the player
 
 # check for win or tie
