@@ -1,3 +1,9 @@
+# Variables
+game_running = True
+winner = None
+current_player = "X"
+
+
 # Creating the game board
 board = ['-', '-', '-',
          '-', '-', '-',
@@ -12,7 +18,6 @@ def display_board(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 # Getting player input
-current_player = "X"
 def get_player_input(board):
     usr_inp = int(input("Choose a board space 1-9: "))
     if usr_inp >= 1 and usr_inp <= 9 and board[usr_inp-1] == "-":
@@ -21,7 +26,6 @@ def get_player_input(board):
         print("Oh noo, that spot is already taking(*_*)")
 
 # Check for win or tie
-winner = None
 def row(board):
     global winner
     if board[0] == board[1] == board[2] and board[0] != "-":
@@ -59,6 +63,13 @@ def diagonal(board):
     elif board[2] == board[5] == board[6] and board[2] != "-":
         winner = board[2]
         return True
+    
+def tie(board):
+    global game_running
+    if "-" not in board:
+        display_board(board)
+        print("It's a tie")
+        game_running = False
 
 
 # A loop to make the game run continously
