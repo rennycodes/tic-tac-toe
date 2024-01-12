@@ -3,7 +3,6 @@ game_running = True
 winner = None
 current_player = "X"
 
-
 # Creating the game board
 board = ['-', '-', '-',
          '-', '-', '-',
@@ -26,9 +25,10 @@ def get_player_input(board):
         print("Oh noo, that spot is already taking(*_*)")
 
 # Check for win or tie
+# Checking rows
 def row(board):
     global winner
-    
+
     if board[0] == board[1] == board[2] and board[0] != "-":
         winner = board[0]
         return True
@@ -40,7 +40,8 @@ def row(board):
     elif board[6] == board[7] == board[8] and board[6] != "-":
         winner = board[6]
         return True
-    
+
+# Checking columns 
 def column(board):
     global winner
 
@@ -56,6 +57,7 @@ def column(board):
         winner = board[2]
         return True
 
+# Checking diagonals
 def diagonal(board):
     global winner
 
@@ -66,7 +68,8 @@ def diagonal(board):
     elif board[2] == board[5] == board[6] and board[2] != "-":
         winner = board[2]
         return True
-    
+
+# Checking tie    
 def tie(board):
     global game_running
 
@@ -74,6 +77,15 @@ def tie(board):
         display_board(board)
         print("It's a tie")
         game_running = False
+
+# Checking for win
+def check_win():
+    global game_running
+
+    if row(board) or column(board) or diagonal(board):
+        print(f"The winner is {winner}")
+        game_running = False
+        
 
 # Switch player
 def switch_player():
@@ -91,10 +103,8 @@ def switch_player():
 while True:
     display_board(board)
     get_player_input(board)
+    check_win()
+    tie(board)
+    switch_player()
 
     
-
-
-
-
-# check for win or tie
