@@ -86,8 +86,7 @@ def check_win():
     if row(board) or column(board) or diagonal(board):
         display_board(board)
         print(f"The winner is {winner}")
-        game_running = False
-        
+        game_running = False 
 
 # Switch player
 def switch_player():
@@ -107,8 +106,6 @@ def random_computer(board):
             board[position] = "O"
             switch_player()
 
-
-
 # A loop to make the game run continously
 while game_running:
     display_board(board)
@@ -117,8 +114,3 @@ while game_running:
     check_win()
     switch_player()
     random_computer(board)
-    
-    
-    
-
-    
