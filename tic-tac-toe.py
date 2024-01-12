@@ -83,6 +83,7 @@ def check_win():
     global game_running
 
     if row(board) or column(board) or diagonal(board):
+        display_board(board)
         print(f"The winner is {winner}")
         game_running = False
         
@@ -100,11 +101,13 @@ def switch_player():
 
 
 # A loop to make the game run continously
-while True:
+while game_running:
     display_board(board)
     get_player_input(board)
-    check_win()
-    tie(board)
     switch_player()
+    tie(board)
+    check_win()
+    
+    
 
     
