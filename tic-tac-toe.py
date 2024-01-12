@@ -1,3 +1,4 @@
+import random
 # Variables
 game_running = True
 winner = None
@@ -98,15 +99,25 @@ def switch_player():
     else:
         current_player = "X"
 
+# Random computer
+def random_computer(board):
+    while current_player == "O":
+        position = random.randint(0, 8)
+        if board[position] == "-":
+            board[position] = "O"
+            switch_player()
+
 
 
 # A loop to make the game run continously
 while game_running:
     display_board(board)
     get_player_input(board)
-    switch_player()
     tie(board)
     check_win()
+    switch_player()
+    random_computer(board)
+    
     
     
 
