@@ -10,3 +10,10 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
 ```
 python tic-tac-toe.py
 ```
+2. ### Game Board:
+The game board is displayed in the console, and players take turns choosing a position to place their symbol ('X' or 'O').
+1 | 2 | 3
+----------
+4 | 5 | 6
+----------
+7 | 8 | 9
