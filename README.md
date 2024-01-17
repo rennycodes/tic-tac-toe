@@ -12,6 +12,7 @@ python tic-tac-toe.py
 ```
 2. ### Game Board:
 The game board is displayed in the console, and players take turns choosing a position to place their symbol ('X' or 'O').
+
 1 | 2 | 3
 ----------
 4 | 5 | 6
