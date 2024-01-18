@@ -1,6 +1,6 @@
 # Tic-Tac-Toe Game
 
-This is a simple command-line implementation of the classic Tic-Tac-Toe game written in Python. The game allows two players to take turns to make their moves.
+This is a simple command-line implementation of the classic Tic-Tac-Toe game written in Python.
 
 ## How to Play
 
