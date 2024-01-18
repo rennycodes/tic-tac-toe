@@ -1,11 +1,11 @@
-# Tic-Tac-Toe Game
+# **Tic-Tac-Toe Game**
 
 This is a simple command-line implementation of the classic Tic-Tac-Toe game written in Python.
 
-## Overview
+## **Overview**
 This Python script allows two players to play the classic Tic Tac Toe game. Player 'X' and Player 'O' take turns to make a move on the 3x3 game board. The game continues until one player wins, or there is a tie.
 
-## Usage
+## **Usage**
 
 1. ### Run the Game:
 
@@ -22,12 +22,12 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
 4. ### Game Outcome:
     The game continues until one player wins by completing a row, column, or diagonal, or if the board is filled without a winner, resulting in a tie.
 
-## Gameplay
+## **Gameplay**
 + Player 'X' starts the game.
 + Players take turns until there is a winner or a tie.
 + The game ends with a victory message or a tie message.
 
-## Implementation Details
+## **Implementation Details**
 + ### Game Logic:
   + The script checks for a winner after every move, considering rows, columns, and diagonals.
   + It detects a tie if the board is full without a winner.
@@ -35,3 +35,5 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
   + Players switch turns between 'X' and 'O' after each move.
 + ### Random Computer Player:
   + The script includes a simple random computer player ('O') for single-player mode.
+
+## **Customization**
