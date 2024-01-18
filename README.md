@@ -21,3 +21,8 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
     When prompted, enter a number between 1 and 9 to place your symbol in the corresponding position on the board.
 4. ### Game Outcome:
     The game continues until one player wins by completing a row, column, or diagonal, or if the board is filled without a winner, resulting in a tie.
+
+## Gameplay
++ Player 'X' starts the game.
++ Players take turns until there is a winner or a tie.
++ The game ends with a victory message or a tie message.
