@@ -33,3 +33,5 @@ This Python script allows two players to play the classic Tic Tac Toe game. Play
   + It detects a tie if the board is full without a winner.
 + ### Player Switching:
   + Players switch turns between 'X' and 'O' after each move.
++ ### Random Computer Player:
+  + The script includes a simple random computer player ('O') for single-player mode.
